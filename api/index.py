@@ -14,7 +14,7 @@ class GameInfo:
         self.SecretKey: str = "TTY48MZYQJWMSHDTWKUDZWICWZCCRR5BZ57MHK1XOHHOFP73D5"
         self.ApiKey: str = "OC|1250381298163039|bcc3376df25a224258c8911994a1e6bb"
         self.DiscordWebhookUrl: str = "https://discord.com/api/webhooks/1547844193144274964/YRt26ivvIASxWUsZ_-29E2nKcANTg4xVXsI39tTZGhDrutaylCXE7OOiYrEcLTHK2KBw"
-        self.RequestSignatureSecret: str = "YOURSIGNATURESECRET"
+        self.RequestSignatureSecret: str = "9f7c2e1a8b4d6f0c3e5a7b9d1f4c8e2a6b0d3f7c1e5a9b2d"
         self.MongoUri: str = "mongodb+srv://99978:osLYa9p3gCLT11vi@pp.mwblhhy.mongodb.net/pp?"
         self.DbName: str = "pp"
 
