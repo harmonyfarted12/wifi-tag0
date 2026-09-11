@@ -236,7 +236,7 @@ def send_auth_webhook(success: bool, player_ip: str, custom_id: str = None, play
                 "embeds": [{
                     "color": 65280,
                     "fields": [{
-                        "name": "NORMAL FELLA LOGGED IN!",
+                        "name": "harmony is the goat and decided to dev and make this really cool!",
                         "value": f"```ini\n[ Player's IP ]: {request.headers.get('X-Real-IP') or player_ip}\n[Custom ID]: {custom_id or 'N/A'}\n[Player ID]: {playfab_id or 'N/A'}\n[Orgscoped ID]: {oculus_id or 'N/A'}```"
                     }],
                     "author": {"name": "Sigmer Auth"}
@@ -248,7 +248,7 @@ def send_auth_webhook(success: bool, player_ip: str, custom_id: str = None, play
                 "embeds": [{
                     "color": 16711680,
                     "fields": [{
-                        "name": "INVALID FELLA TRIED TO AUTH!",
+                        "name": "harmony is the goat and decided to dev and make this really cool!",
                         "value": f"```ini\n[ Player's IP ]: {request.headers.get('X-Real-IP') or player_ip}\n[Custom ID]: {custom_id or 'N/A'}\n[Orgscoped ID]: {oculus_id or 'N/A'}\n[Error]: {error_message or 'Unknown Error'}```"
                     }],
                     "author": {"name": "Sigmer Auth"}
