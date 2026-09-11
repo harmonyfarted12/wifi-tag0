@@ -169,7 +169,7 @@ def _get_hb_col():
        return None
    try:
        _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
-       _hb_col = _mongo_client["Yaletag"]["heartbeats"]
+       _hb_col = _mongo_client["WIFI TAG"]["heartbeats"]
        try:
            _hb_col.create_index("expireAt", expireAfterSeconds=0)
            _hb_col.create_index("oculusId", unique=True)
@@ -186,7 +186,7 @@ def _get_blocked_col():
        return _blocked_col
    if _get_hb_col() is None:
        return None
-   _blocked_col = _mongo_client["yaletag"]["blocked_players"]
+   _blocked_col = _mongo_client["WIFI TAG"]["blocked_players"]
    try:
        _blocked_col.create_index("expireAt", expireAfterSeconds=0)
        _blocked_col.create_index("playFabId", unique=True)
@@ -200,7 +200,7 @@ def _get_violation_col():
        return _violation_col
    if _get_hb_col() is None:
        return None
-   _violation_col = _mongo_client["yaletag"]["violations"]
+   _violation_col = _mongo_client["WIFI TAG"]["violations"]
    try:
        _violation_col.create_index("playFabId", unique=True)
    except Exception as e:
@@ -373,7 +373,7 @@ def _get_attest_col():
        except Exception as e:
            print(f"[Mongo] attest init failed: {e}")
            return None
-   _attest_col = _mongo_client["yaletag"]["attestations"]
+   _attest_col = _mongo_client["WIFI TAG"]["attestations"]
    try:
        _attest_col.create_index("expireAt", expireAfterSeconds=0)
        _attest_col.create_index("oculusId", unique=True)
@@ -440,7 +440,7 @@ def _get_sess_col():
        return _sess_col
    if _get_hb_col() is None:
        return None
-   _sess_col = _mongo_client["Yaletag"]["hb_sessions"]
+   _sess_col = _mongo_client["WIFI TAG"]["hb_sessions"]
    try:
        _sess_col.create_index("expireAt", expireAfterSeconds=0)
        _sess_col.create_index("oculusId", unique=True)
@@ -642,7 +642,7 @@ def _get_device_ban_col():
        except Exception as e:
            print(f"[Mongo] device_ban init failed: {e}")
            return None
-   _device_ban_col = _mongo_client["Yaletag"]["device_bans"]
+   _device_ban_col = _mongo_client["WIFI TAG"]["device_bans"]
    try:
        _device_ban_col.create_index("deviceId", unique=True)
        for doc in _device_ban_col.find():
@@ -739,7 +739,7 @@ def _get_nonce_col():
            _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
        except:
            return None
-   _attest_nonce_col = _mongo_client["yaletag"]["attest_nonces"]
+   _attest_nonce_col = _mongo_client["WIFI TAG"]["attest_nonces"]
    try:
        _attest_nonce_col.create_index("expireAt", expireAfterSeconds=0)
        _attest_nonce_col.create_index("nonce", unique=True)
@@ -3004,11 +3004,11 @@ def titledata():
       "LatestPrivacyPolicyVersion": "2024.09.20",  
       "LatestTOSVersion": "2024.09.20",  
       "MOTD": "<color=#00FFFF>W</color><color=#00F5FF>E</color><color=#00EBFF>L</color><color=#00E1FF>C</color><color=#00D7FF>O</color><color=#00CDFF>M</color><color=#00C3FF>E</color> <color=#00AFFF>T</color><color=#00A5FF>O</color> <color=#0090FF>W</color><color=#0086FF>I</color><color=#007CFF>F</color><color=#0072FF>I</color> <color=#0054FF>T</color><color=#004AFF>A</color><color=#0040FF>G</color>",
-      "SeasonalStoreBoardSign": "<color=purple>RATE THE GAME 5 STARS!</color>\n\n<color=aqua>YALE TAG",  
-      "TOS_2024.09.20": "YALE TAG",  
-      "TOBAlreadyOwnCompTxt": "YALE TAG",  
+      "SeasonalStoreBoardSign": "<color=purple>RATE THE GAME 5 STARS!</color>\n\n<color=aqua>WIFI TAG",  
+      "TOS_2024.09.20": "WIFI TAG",  
+      "TOBAlreadyOwnCompTxt": "WIFI TAG",  
       "TOBAlreadyOwnPurchaseBundle": "RETRO",  
-      "TOBDefCompTxt": "YALE TAG",  
+      "TOBDefCompTxt": "WIFI TAG",  
       "TOBDefPurchaseBtnDefTxt": "RETRO",  
       "UseLegacyIAP": False  
   }  
@@ -3565,7 +3565,7 @@ def _get_report_spam_col():
            _mongo_client = MongoClient(_MONGO_URI, serverSelectionTimeoutMS=5000)
        except:
            return None
-   _report_spam_col = _mongo_client["Yaletag"]["report_spam"]
+   _report_spam_col = _mongo_client["WIFI TAG"]["report_spam"]
    try:
        _report_spam_col.create_index("reporterId", unique=True)
    except:
