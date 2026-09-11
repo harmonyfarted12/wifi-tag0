@@ -1,3 +1,5 @@
-Flask
+flask
 requests
 pymongo
+pyjwt
+python-dotenv
